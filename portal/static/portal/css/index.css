@@ -1,0 +1,136 @@
+/* Matheus Padilha Cordeiro de Carvalho  e Julio Cesar Ferreira dos Santos, Atividade ( 06 ) , Turma (513) */
+
+                
+                *{
+                    box-sizing:border-box; /* Serve para que o border e o padding entrem dentro da altura e largura do elemento , melhorando o alinhamento */
+                }
+                
+                body {
+                    background-color: #d3d3d3; /* Serve para colocar a cor de fundo ( cinza ) */
+                }
+                h2,h3,h4 {
+                    font-size: 22.5px; /* Serve para aumentar o tamanho da letra */
+                
+                }
+
+                h1 {
+                    font-size: 22.5px; /* Serve para aumentar o tamanho da letra */
+                    font-family: monospace; /* Serve para definir o tipo de fonte */
+                }
+                
+                
+                header{ 
+                    background-color: #FFFFFF; /* Serve para definir a cor de fundo ( branco ) */
+                    border: 1px solid black; /* Serve para definir a cor da borda e o tamanho */
+                    border-radius: 15px; /* Serve para definir o tipo de borda ( arredondada )*/
+                    width: 60%; /* Serve para definir a largura */
+                    margin:auto; /* Serve para definir a margem ( esquerda e direita ) automatica  */
+                    text-align: center;/* Serve para alinhar o texto no centro */
+                    margin-top:100px; /* Serve para definir a margem top ( parte superior ) */
+                    height: auto; /* Serve para definir a altura */
+                    
+                }
+
+                nav{
+                    background-color: #FFFFFF; /* Serve para definir a cor de fundo ( branca ) */
+                    border: 1px solid black; /* Serve para definir a cor da borda e o tamanho */
+                    border-radius: 15px; /* Serve para definir o tipo de borda ( arredondada )*/
+                    width:20%; /* Serve para definir a largura */
+                    height: auto; /* Serve para definir a altura */
+                    padding-top: 100px; /* Serve para definir o espaçamento interno de algo entre conteudo e borda */
+                    text-align: center; /* Serve para alinhar o texto no centro */
+                }
+
+                main{
+                    background-color: #FFFFFF; /* Serve para definir a cor de fundo ( branca ) */
+                    border: 1px solid black; /* Serve para definir a cor da borda e o tamanho */
+                    border-radius: 15px; /* Serve para definir o tipo de borda ( arredondada )*/
+                    width: 80%; /* Serve para definir a largura */ 
+                    margin:auto; /* Serve para definir a margem ( esquerda e direita ) automatica  */
+                    height: auto; /* Serve para definir a altura */
+                    text-align: center; /* Serve para alinhar o texto no centro */
+                    overflow-y: auto; /* Controla a rolagem vertical (eixo Y). */
+                    overflow-x: auto; /* Controla a rolagem horizontal (eixo X). */
+                    padding: 20px; /* Serve para definir o espaçamento interno de algo entre conteudo e borda */
+                
+                 
+                }
+
+                footer{  
+                    background-color: #FFFFFF; /* Serve para definir a cor de fundo ( branca ) */
+                    border: 1px solid black; /* Serve para definir a cor da borda e o tamanho */
+                    border-radius: 15px; /* Serve para definir o tipo de borda ( arredondada )*/
+                    width: 60%; /* Serve para definir a largura */ 
+                    margin:auto; /* Serve para definir a margem ( esquerda e direita ) automatica  */
+                    text-align: center; /* Serve para alinhar o texto no centro */
+                    height: auto; /* Sereve para definir a altura */
+                }
+
+                body > section{  
+            
+                    display: flex; /* Serve para alinhar os elementos ( flexivel )*/
+                    width:60%; /* Serve para definir a largura */ 
+                    margin:auto /* Serve para definir a margem ( esquerda e direita ) automatica  */
+                    
+                    
+                }
+
+                button {
+
+                    width: 100px; /* Serve para definir a largura */ 
+                    height: auto; /* Serve para definir a altura */
+
+                    background-color: gray; /* Serve para definir a cor de fundo ( cinza ) */
+
+                    border-radius: 10px; /* Serve para definir o tipo de borda ( arredondada )*/
+                    border: 1px solid black; /* Serve para definir a cor da borda e o tamanho */
+
+                    font-size: 15px; /* Serve para aumentar o tamanho da letra */
+                    font-weight: bold; /* Serve para deixar as letras em negrito */
+                }
+                
+                .fotinha {
+
+                    margin-left: 10px; /* Serve para definir a margem top ( parte lateral ) */
+                    max-width: 100%; /* Serve para definir a largura máxima*/
+                    width: 250px; /* Serve para definir somente a largura */
+                    height: auto; /* Serve para deixar a altura automatica */
+                }
+                
+                /* Quando a tela for menor que 768px, o layout deixa de ser horizontal e passa a ser vertical para celulares */
+                @media screen and (max-width:768px) { 
+                    body > section {
+                        flex-direction: column; /* reorganiza os elementos verticalmente em telas pequenas */
+                    }
+
+                    nav { /* Menu ocupa a largura total */
+                        width: 100%; /* Define a largura total */
+                        height: auto; /* Define a altura total*/
+                    }
+
+                    main { /* Conteudo ocupa a largura total */
+                        width:100%; /* Define a largura total */
+                    }
+
+                    header, footer{
+                        width:100%; /* Define a largura total */
+                    }
+                }
+
+                .botao {
+                    display: inline-block; /* Faz o link se comportar como o botao da ATV06 */
+                    width: 90%; /* Serve para definir a largura (itens de menu com titulos maiores) */
+                    background-color: gray; /* Serve para colocar a cor de fundo ( cinza ) */
+                    color: black; /* Serve para definir a cor do texto */
+                    text-decoration: none; /* Serve para tirar o sublinhado do link */
+                    border-radius: 10px; /* Serve para definir o tipo de borda ( arredondada ) */
+                    border: 1px solid black; /* Serve para definir a cor da borda e o tamanho */
+                    padding: 4px 0; /* Serve para definir o espaçamento interno */
+                    font-size: 15px; /* Serve para aumentar o tamanho da letra */
+                    font-weight: bold; /* Serve para deixar as letras em negrito */
+                }
+
+
+                .botao:hover {
+                    background-color: #b0b0b0; /* Serve para destacar o item de menu sob o mouse */
+                }

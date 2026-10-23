@@ -1,0 +1,87 @@
+/* Matheus Padilha Cordeiro de Carvalho  e Julio Cesar Ferreira dos Santos, Atividade ( 06 ) , Turma (513) */
+ 
+            
+
+           body{
+                
+                font-family: Arial, sans-serif; /* Serve para usar as fontes em ordem . Se não encontrar o ARIAL , ele vai procurar o SANS-SERIF */
+                margin:0; /* Serve para definir todas as margens ( zerar elas ) */
+                padding:40px; /* Serve para definir o espaçamento  interno entre o conteudo e a borda dentro de uma caixa */
+                overflow-x:hidden; /* Serve para controlar o conteudo que excede o elemento ( O X SIGNIFICA -> eixo X , ou seja , esquerda e direita ) ( hidden -> cortar esse excedente ) */
+                
+
+            }
+
+            #perfil{  /* Serve para definir o css de um ID ( identificador unico de um elemento ) */
+                display: flex; /* Serve para alinhar os elementos ( flexivel ) */
+                align-items:center; /* Serve para alinhas os itens ( centro ) do eixo do flex  ( de forma vertical , ou seja , cima e baixo ) */
+                gap:30px; /* Serve para deixar um espaçamento entre os elementos de um flex ou grid */
+
+                background-color:white; /* Serve para colocar cor de fundo ( branca )*/
+                padding:30px; /* Serve para definfir o espaçamento interno entre um conteudo e a borda de uma caixa */
+
+                border-radius:15px; /* Serve para definir o tipo de borda ( arredondada )*/
+
+                width:auto; /* Serve para definir a largura */
+                margin-left: auto; /* Serve para definir a margem da esquerda */
+                flex-wrap:wrap; /* Serve para que os elementos quebrem a linha quando faltar espaço ( so funciona com display:flex; ) */
+            }
+
+            img{
+                width: 250px; /* Serve para definir a largura */
+                max-width: 100%; /* Serve para definir a largura */
+                height:auto; /* Serve para definir a altura  */
+                margin-left:auto; /* Serve para definir a margem esquerda */
+
+                object-fit:cover; /* Serve para definir como a imagem vai se comportar dentro de uma caixa ( cover -> serve para preencher toda a parte sem distorcer , mas pode cortar algumas partes */
+
+                border-radius:15px; /* Serve para definir o tipo de borda ( arredondada ) */
+            }
+
+            h1{
+                margin:0; /* Serve para definir todas as margens ( zeradas ) */
+                font-size:35px; /* Serve para definir o tamanho da fonte */
+                text-align: center; /* Serve para alinhar o texto ( centro ) */
+            }
+
+            .dados h2{
+                margin:8px 0; /* Serve para definir todas as margens ( 8 -> serve para cima e baixo ) ( 0 -> serve para esquerda e direita ) */
+                font-size:25px; /* Serve para definir o tamanho das letras */
+                font-weight:normal; /* Serve para definir a formatação das letras ( normal  ) */
+            }
+
+            .objetivo h2{
+                margin:8px 0; /* Serve para definir todas as margens ( 8 -> serve para cima e baixo ) ( 0 -> serve para esquerda e direita ) */
+                font-size:25px; /* Serve para definir o tamanho das letras */
+                font-weight: bold; /* Serve para definir a formatação das letras ( negrito ) */
+            }
+
+            .objetivo h3, .formacao h3{ 
+                margin-top:8px; /* Serve para definir a margem de cima */
+                font-size:20px; /* Serve para definir o tamanho das letras */
+                font-weight: normal; /* Serve para definir a formatação das letras ( negrito ) */
+            }
+
+            #objetivo{  /* Serve para definir o css de um ID ( identificador unico de um elemento ) */
+                
+                text-align: left; /* Serve para alinhar o texto ( esquerda )*/
+                width:95%; /* Serve para definir a largura  */
+                margin-left: auto; /* Serve para definir a margem ( esquerda )*/ 
+                border-radius: 15px; /* Serve para definir o tipo de borda ( arredondada ) */
+                padding: 40px; /* Serve para definir o espaçamento interno entre o conteudo e as bordas de uma caixa */
+                margin-top: 0px; /* Serve para definir a margem ( cima ) */
+            }
+            
+            #formacao{  /* Serve para definir o css de um ID ( identificador unico de um elemento ) */
+                
+                text-align: left; /* Serve para alinhar o texto ( esquerda ) */
+                width:95%; /* Serve para definir a largura */
+                margin-left: auto; /* Serve para definir a margem ( esquerda ) */
+                border-radius: 15px; /* Serve para definir o tipo de borda ( arredondada ) */
+                padding: 40px; /* Serve para definir o espaçamento interno entre o conteudo e as bordas de uma caixa */
+            }
+            
+            ul{
+                font-weight: bold; /* Serve para definir a formatação das letras ( negrito )*/
+                font-size: 20px; /* Serve para definir o tamanho das letras */
+            }
