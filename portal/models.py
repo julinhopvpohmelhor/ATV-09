@@ -64,12 +64,6 @@ class Menu(models.Model):
     def externo(self):
         return self.tipo_destino == self.DESTINO_EXTERNO
 
-    @property
-    def url(self):
-        if self.externo:
-            return self.url_externa
-        return self.conteudo.get_absolute_url()
-
     def clean(self):
         if self.tipo_destino == self.DESTINO_INTERNO:
             if not self.conteudo_id:
