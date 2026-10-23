@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'portal/css/currico.css' %}">
+        <link rel="stylesheet" href="{% static 'portal/css/tema.css' %}">
+        <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'portal/img/favicon.ico' %}">
+        <title>{% block titulo %}Portal de Curriculos e Temas{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <h1>Portal de Curriculos e Temas</h1>
+        </header>
+
+        <section>
+            <nav>
+                <h1>Menu de Acesso:</h1>
+                <br><br><br>
+                {# Menu gerado dinamicamente a partir do model Menu (context processor) #}
+                {% for item in itens_menu %}
+                    {% if item.externo %}
+                        <a class="botao" href="{{ item.url_externa }}" target="_blank" rel="noopener noreferrer">{{ item.titulo }}</a>
+                    {% elif item.conteudo.slug == 'inicio' %}
+                        <a class="botao" href="{% url 'home' %}">{{ item.titulo }}</a>
+                    {% else %}
+                        <a class="botao" href="{% url 'conteudo' item.conteudo.slug %}">{{ item.titulo }}</a>
+                    {% endif %}
+                    <br><br>
+                {% empty %}
+                    <p>Nenhum item de menu cadastrado.</p>
+                {% endfor %}
+            </nav>
+
+            <main>
+                {% block conteudo %}{% endblock %}
+            </main>
+        </section>
+
+        <footer>
+            <h1>ATV09 - Desenvolvimento Web</h1>
+        </footer>
+    </body>
+</html>

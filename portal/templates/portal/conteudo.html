@@ -1,0 +1,12 @@
+{% extends 'portal/base.html' %}
+
+{% block titulo %}{% if conteudo %}{{ conteudo.titulo }}{% else %}Portal de Curriculos e Temas{% endif %}{% endblock %}
+
+{% block conteudo %}
+    {# O HTML salvo no banco e inserido sem escape (|safe): so administradores o editam #}
+    {% if conteudo %}
+        {{ conteudo.conteudo_html|safe }}
+    {% else %}
+        <p>Página inicial ainda não cadastrada. Crie um conteúdo com o slug "inicio" no Django Admin.</p>
+    {% endif %}
+{% endblock %}
